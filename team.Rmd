@@ -18,6 +18,17 @@ barplot(year) # I am not sure why the barplot looks like this
 
 ```
 
+#2
+```{r}
+ggplot(choco, aes(x = factor(year), y = Rating)) + geom_bar(stat= "identity")
+```
+#3 
+```{r}
+
+```
+
+
+
 ```{r}
 locations <- split(choco, choco$Company.Location)
 usa <- locations$U.S.A.

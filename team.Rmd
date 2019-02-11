@@ -36,3 +36,5 @@ means <- c(canadaMean, franceMean, usaMean)
 bar <- barplot(means, main="Average Rating by Country", names.arg=c("Canada", "France", "USA"), ylim = c(0, 4), ylab = "Avg Rating (out of 5.0)", col=c("lightblue", "mistyrose", "lavender"))
 text(bar, 2.5, labels=format(round(means, digits=2)))
 ```
+
+It appears that the ratings are fairly similar, although Canada does have the highest average rating, followed by France and then the USA.

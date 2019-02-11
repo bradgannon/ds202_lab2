@@ -1,0 +1,23 @@
+---
+title: "individual1"
+output: html_document
+---
+```{r}
+library(ggplot2)
+choco <- read.csv("https://xdaiisu.github.io/ds202materials/hwlabs/choco.csv")
+head(choco)
+ratings <- choco$Rating
+hist(ratings)
+
+```
+
+It appears from the histogram that most ratings are in the 2-4 range, with very few being given a perfect 5 rating.
+
+```{r}
+pct <- choco$Cocoa.Pct
+plot(pct, ratings, main="Ratings vs. Cocoa Pct.", xlab="% Cocoa", ylab="Rating")
+
+```
+
+Although this scatterplot isn't entirely useful, you can see that there is a fairly box-like shape in the middle. Due to its relative symmetry, it is reasonable to say that the rating does not necessarily depend on the cacao percentage, as there are a wide range of ratings for each percentage.
+

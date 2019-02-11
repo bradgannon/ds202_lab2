@@ -12,12 +12,13 @@ dim(choco)
 
 Given that the dimensions of this dataset are 1852 x 9, it is assumed that the number of chocolate bars tested is 1852.
 
+#2
 ```{r}
 year <- choco$Review.Date
-barplot(year) # I am not sure why the barplot looks like this
-
+ggplot(choco, aes(x = factor(year), y = Rating)) + geom_bar(stat= "identity")
 ```
 
+#3 
 ```{r}
 locations <- split(choco, choco$Company.Location)
 usa <- locations$U.S.A.

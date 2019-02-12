@@ -39,3 +39,14 @@ text(bar, 2.5, labels=format(round(means, digits=2)))
 ```
 
 It appears that the ratings are fairly similar, although Canada does have the highest average rating, followed by France and then the USA.
+```{r}
+#4 what is the top10 rating count by bean origin?
+```
+
+```{r}
+#5
+count_rating <- as.data.frame(table(factor(choco$Rating), choco$Specific.Bean.Origin))
+colnames(count_rating) <- c("Rating", "Bean_Orgin", "Freq")
+count_rating[order(-count_rating$Freq, count_rating$Bean_Orgin),][1:10,]
+
+```

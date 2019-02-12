@@ -1,0 +1,28 @@
+---
+title: "individual2"
+author: "Seydou Yacouba"
+date: "February 10, 2019"
+output: html_document
+---
+
+```{r}
+library(ggplot2)
+choco <- read.csv("https://ds202-at-isu.github.io/labs/data/choco.csv")
+```
+
+```{r}
+names(choco)
+```
+
+```{r}
+ggplot(choco, aes(Rating)) + geom_histogram(bins  = 15)
+
+```
+
+The most rating lies between 2.4 and 3.5. And we have outliers at 5.
+```{r}
+ggplot (choco, aes(x = Cocoa.Pct, y = Rating)) + geom_point()
+```
+
+
+
